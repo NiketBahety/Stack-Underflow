@@ -1,0 +1,11 @@
+.tag {
+    background-color: rgba(170, 214, 255, 0.328);
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 13px;
+    color: rgb(0, 0, 91);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

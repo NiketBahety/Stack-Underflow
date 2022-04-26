@@ -1,0 +1,111 @@
+.home-main-bar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: calc(100% - 280px);
+    margin-left: 100px;
+}
+.home-main-bar-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.home-main-bar-header p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+.ask-btn {
+    text-decoration: none;
+    background-color: #3294e0;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+.ask-btn:hover {
+    background-color: #3183c2;
+}
+.question-card {
+    display: flex;
+    margin: 10px 0;
+    padding: 5px 30px 10px 30px;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+.question-card-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    color: black;
+    font-size: 16px;
+    margin-right: 20px;
+    padding: 0 10px;
+}
+.question-card-left p {
+    margin: 5px 0;
+    padding: 0;
+}
+.question-card-right {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start;
+    max-width: 80%;
+}
+.question-card-title {
+    padding: 0 0 10px 0;
+    color: black;
+    font-size: 16px;
+}
+.question-card-title a {
+    text-decoration: none;
+    color: black;
+}
+.question-card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.question-tags {
+    display: flex;
+    max-width: 50%;
+    flex-flow: row wrap;
+}
+.question-tags .tag {
+    margin: 5px;
+    height: 20px;
+}
+.question-card-bottom-right {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+.question-asked-by {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    margin: 0 20px;
+}
+.question-asked-by div {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.question-asked-by .link-user {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    text-transform: lowercase;
+}
+.num-of-questions {
+    font-size: 14px;
+}

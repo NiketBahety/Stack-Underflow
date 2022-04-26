@@ -1,0 +1,30 @@
+.tags-page {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 200px;
+    margin-top: 50px;
+    width: auto;
+}
+.tag-cnt {
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    max-width: 200px;
+    margin: 10px 20px;
+    height: fit-content;
+}
+.tag-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.tag-desc p {
+    margin: 10px 0;
+}

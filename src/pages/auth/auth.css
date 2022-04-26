@@ -1,0 +1,83 @@
+.authSection {
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    width: 120px;
+    margin: 10px 0;
+}
+p {
+    color: #666767;
+    font-size: 13px;
+}
+span {
+    color: #007ac6;
+    cursor: pointer;
+}
+.auth-container {
+    max-width: max(20vw, 250px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+.auth-container form {
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 0 10px 25px rgb(0 0 0 / 5%), 0 20px 48px rgb(0 0 0 / 5%),
+        0 1px 4px rgb(0 0 0 / 10%);
+}
+
+.inp {
+    padding: 10px;
+    width: calc(100% - 30px);
+    border: solid 1px #0000003e;
+    font-size: 13px;
+}
+.auth-container form label h4 {
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.check input {
+    width: 20px;
+    padding: 0;
+    margin: 0 10px;
+    font-size: 13px;
+    border: solid 1px #0000003e;
+}
+.auth-btn {
+    margin-top: 10px;
+    padding: 10px 5px;
+    background-color: #009dff;
+    border: 1px solid #009dff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 13px;
+    font-weight: 500;
+}
+.auth-btn:hover {
+    background-color: #018ce3;
+}
+.handle-switch-button {
+    background-color: transparent;
+    color: blue;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+}

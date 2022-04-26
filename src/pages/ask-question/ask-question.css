@@ -1,0 +1,75 @@
+.ask-question {
+    margin-top: 50px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.ask-question .heading {
+    font-size: 28px;
+    color: #333;
+    margin: 30px 0;
+}
+.question-form {
+    width: 70vw;
+    margin-top: 10px;
+}
+.question-form div {
+    background-color: rgb(237, 237, 237);
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+.question-form label {
+    width: 100%;
+}
+.question-form label input,
+.question-form label textarea {
+    margin: 5px 0;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px 5px;
+    border-radius: 3px;
+}
+.question-form label textarea {
+    height: 100px;
+    resize: vertical;
+}
+.question-form label h3 {
+    /* padding: 5px 0; */
+    font-size: 18px;
+}
+.question-form label p {
+    color: #333;
+}
+.submit-btn {
+    text-decoration: none;
+    background-color: #3294e0;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    margin: 20px 0;
+}
+.submit-btn:hover {
+    background-color: #3183c2;
+}
+.num-of-questions {
+    margin: 0 20px;
+}
+::placeholder {
+    padding: 0 0 0 10px;
+}
+.question-form label textarea:focus {
+    outline: none;
+    border: 3px solid #3183c2;
+    border-radius: 3px;
+}
+.question-form label input:focus {
+    border: 3px solid #3183c2;
+    border-radius: 3px;
+}

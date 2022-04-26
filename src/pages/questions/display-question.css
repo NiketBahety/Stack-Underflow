@@ -1,0 +1,139 @@
+.question-details-page {
+    margin-top: 60px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 280px);
+    height: fit-content;
+}
+.title {
+    color: #333;
+    font-size: 22px;
+    font-weight: 500;
+}
+.question-body {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.votes-cont {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.votes-cont p {
+    margin: 0;
+    padding: 0;
+    font-size: 26px;
+    color: #333;
+}
+.votes-cont svg {
+    width: 30px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.votes-cont svg.clicked {
+    fill: #ef8236;
+}
+.question-details {
+    padding: 10px 30px;
+    width: 90%;
+    font-size: 16px;
+    color: #333;
+}
+.tags-cont {
+    display: flex;
+    max-width: 70%;
+    flex-flow: row wrap;
+    margin-left: 20px;
+    padding: 10px 10%;
+}
+.tag {
+    margin: 5px;
+    height: 16px;
+}
+.question-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.share {
+    margin-left: 20px;
+    padding: 10px 10%;
+}
+.share span {
+    font-size: 13px;
+    color: grey;
+    padding: 0 5px;
+}
+.user {
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    padding: 10px;
+    border-radius: 3px;
+}
+.user p {
+    color: #333;
+}
+.user-profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.link-user {
+    color: #33a7ff;
+    text-decoration: none;
+}
+.answers {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(67, 67, 67);
+    padding-left: 10px;
+}
+.answers-cont {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+.answer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+}
+textarea {
+    width: 90%;
+    height: 100px;
+    resize: vertical;
+    margin-left: 10px;
+}
+textarea:focus {
+    outline: none;
+    border: 3px solid #3183c2;
+    border-radius: 3px;
+}
+.answer-btn {
+    text-decoration: none;
+    background-color: #3294e0;
+    color: white;
+    padding: 13px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    margin: 20px 0;
+    width: fit-content;
+    margin-left: 10px;
+}
+.answer-btn:hover {
+    background-color: #3183c2;
+}
