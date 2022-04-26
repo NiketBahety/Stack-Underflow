@@ -52,8 +52,9 @@ const QuestionDetails = () => {
             : (sameUser = false);
 
     if (question) {
-        if (question[0].upVotes.includes(User.user._id)) upVote = true;
-        else if (question[0].downVotes.includes(User.user._id)) downVote = true;
+        if (question[0].upVotes.includes(User?.user?._id)) upVote = true;
+        else if (question[0].downVotes.includes(User?.user?._id))
+            downVote = true;
     }
 
     const handleDelete = () => {
