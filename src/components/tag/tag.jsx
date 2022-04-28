@@ -5,7 +5,7 @@ import './tag.css';
 
 const Tag = (props) => {
     let val = props.name;
-    val.replace('+', '%2b');
+    val = val.replaceAll('+', '%2b');
     return (
         <div className="tag">
             <Link to={`/Questions?${val}`}>{props.name}</Link>
