@@ -3,7 +3,7 @@ import axios from 'axios';
 axios.defaults.withCredentials = true;
 
 const API = axios.create({
-    baseURL: 'https://stack-underflow-api.herokuapp.com',
+    baseURL: 'https://stack-underflow-api.herokuapp.com/api/v1',
 });
 
 export const logIn = (authData) => API.post('/users/login', authData);
