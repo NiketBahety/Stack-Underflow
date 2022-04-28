@@ -8,6 +8,10 @@ import QuestionsList from './questionsList';
 const HomeMainBar = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const location = useLocation();
+
+    let tag = window.location.search.substring(1);
+
     const user = useSelector((state) => state.currentUserReducer);
     const redirect = () => {
         if (user === null) {
@@ -17,15 +21,14 @@ const HomeMainBar = () => {
     };
 
     useEffect(() => {
-        dispatch(getAllQuestions());
-    }, [dispatch]);
+        dispatch(getAllQuestions(tag));
+    }, [dispatch, location]);
 
     let questionsList = useSelector(
         (state) => state.questionsReducer?.data?.questions
     );
     if (questionsList === undefined) questionsList = [];
 
-    const location = useLocation();
     return (
         <div className="home-main-bar">
             <div className="home-main-bar-header">

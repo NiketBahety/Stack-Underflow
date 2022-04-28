@@ -3,14 +3,15 @@ import axios from 'axios';
 axios.defaults.withCredentials = true;
 
 const API = axios.create({
-    baseURL: 'https://stack-underflow-api.herokuapp.com/api/v1',
+    baseURL: 'https://stack-underflow-api.herokuapp.com',
 });
 
 export const logIn = (authData) => API.post('/users/login', authData);
 export const signUp = (authData) => API.post('/users/signup', authData);
 export const logOut = () => API.get('/users/logout');
 
-export const getAllQuestions = () => API.get('/questions/getAllQuestions');
+export const getAllQuestions = (tag) =>
+    API.get(`/questions/getAllQuestions?tag=${tag}`);
 export const askQuestion = (data) => API.post('/questions/askQuestion', data);
 export const answerQuestion = (data, id) =>
     API.patch(`/questions/answerQuestion/${id}`, data);

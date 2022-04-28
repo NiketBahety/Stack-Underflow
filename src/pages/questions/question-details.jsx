@@ -42,7 +42,7 @@ const QuestionDetails = () => {
         (state) => state.questionsReducer?.data?.questions
     );
 
-    questionsList === undefined && dispatch(getAllQuestions());
+    questionsList === undefined && dispatch(getAllQuestions(''));
 
     let question = questionsList?.filter((question) => question._id === id);
 

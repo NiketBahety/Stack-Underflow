@@ -10,9 +10,9 @@ export const askQuestion = (questionData, navigate) => async (dispatch) => {
     }
 };
 
-export const getAllQuestions = () => async (dispatch) => {
+export const getAllQuestions = (tag) => async (dispatch) => {
     try {
-        const { data } = await api.getAllQuestions();
+        const { data } = await api.getAllQuestions(tag);
         dispatch({ type: 'GET_QUESTIONS', data });
     } catch (err) {
         console.log(err);
