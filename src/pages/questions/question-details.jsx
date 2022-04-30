@@ -13,6 +13,8 @@ import { deleteQuestion } from '../../redux/actions/questions';
 import { deleteAnswer } from '../../redux/actions/questions';
 import copy from 'copy-to-clipboard';
 import { vote } from '../../redux/actions/questions';
+import { toast } from 'react-toastify';
+toast.configure({ position: 'top-center', autoClose: 2500 });
 
 const QuestionDetails = () => {
     const { id } = useParams();
@@ -29,13 +31,13 @@ const QuestionDetails = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         let temp = answerBody.trim();
-        if (temp === '') alert('Answer cannot be empty !!');
+        if (temp === '') toast.warning('Answer cannot be empty !!');
         else dispatch(answerQuestion({ answerBody: temp }, id));
     };
 
     const handleShare = () => {
         copy(window.location.href);
-        alert('Copied');
+        toast.success('Link copied to clipboard !!');
     };
 
     let questionsList = useSelector(

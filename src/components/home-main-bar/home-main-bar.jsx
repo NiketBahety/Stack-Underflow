@@ -4,6 +4,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { getAllQuestions } from '../../redux/actions/questions';
 import './home-main-bar.css';
 import QuestionsList from './questionsList';
+import { toast } from 'react-toastify';
+toast.configure({ position: 'top-center', autoClose: 2500 });
 
 const HomeMainBar = () => {
     const navigate = useNavigate();
@@ -15,7 +17,7 @@ const HomeMainBar = () => {
     const user = useSelector((state) => state.currentUserReducer);
     const redirect = () => {
         if (user === null) {
-            alert('Please login/signup to ask a question');
+            toast.warning('Please login to post questions !!');
             navigate('/Auth');
         } else navigate('/AskQuestion');
     };
