@@ -109,3 +109,20 @@
 .num-of-questions {
     font-size: 14px;
 }
+ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+ul li {
+    padding: 5px 10px;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+ul li:hover {
+    background-color: lightgrey;
+    transition: 0.2s ease-in-out;
+}

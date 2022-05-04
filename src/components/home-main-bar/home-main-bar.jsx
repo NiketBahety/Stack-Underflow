@@ -1,16 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { getAllQuestions } from '../../redux/actions/questions';
 import './home-main-bar.css';
 import QuestionsList from './questionsList';
 import { toast } from 'react-toastify';
+import Paginate from './paginate';
 toast.configure({ position: 'top-center', autoClose: 2500 });
 
 const HomeMainBar = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const location = useLocation();
+
+    const questionsPerpage = 10;
 
     let tag = window.location.search.substring(1);
 
@@ -31,6 +34,22 @@ const HomeMainBar = () => {
     );
     if (questionsList === undefined) questionsList = [];
 
+    const [currentPage, setCurrentPage] = useState(1);
+
+    let startIndex = (currentPage - 1) * questionsPerpage;
+    let endIndex =
+        startIndex +
+        Math.min(questionsPerpage, questionsList.length - startIndex);
+
+    let currentQuestions = [];
+
+    for (let i = startIndex; i < endIndex; i++)
+        currentQuestions.push(questionsList[i]);
+
+    const paginate = (pageNum) => {
+        setCurrentPage(pageNum);
+    };
+
     return (
         <div className="home-main-bar">
             <div className="home-main-bar-header">
@@ -43,7 +62,12 @@ const HomeMainBar = () => {
                     Ask Question
                 </button>
             </div>
-            <QuestionsList questions={questionsList}></QuestionsList>
+            <QuestionsList questions={currentQuestions}></QuestionsList>
+            <Paginate
+                questions={questionsList}
+                questionsPerPage={questionsPerpage}
+                paginate={paginate}
+            ></Paginate>
         </div>
     );
 };
